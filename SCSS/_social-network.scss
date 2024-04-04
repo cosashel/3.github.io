@@ -1,0 +1,18 @@
+.social-network{
+    background-color: #fff;
+    .social-network-container{
+        @extend %container;
+        padding-top: 150px;
+        padding-bottom: 100px;
+    }
+    .social-network-text{
+        display: flex;
+        gap:10px;
+        margin: 0 auto;
+        @include text(#242121,Roboto Condensed,clamp(0.875rem, calc(0.612rem + 1.32vw), 1.5rem),400,0.6,none);
+        line-height: 16px;
+    }
+    a:hover{
+        color:#00B2A0;
+    }
+}

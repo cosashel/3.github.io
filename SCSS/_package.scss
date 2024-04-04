@@ -1,0 +1,53 @@
+.package{
+    background-color: #F8F8F8;
+    .package-container{
+        @extend %container;
+        flex-direction: column;
+        padding-top: 150px;
+        padding-bottom: 150px;
+    }
+    .package-title{
+        @include text(#01353E,Raleway,clamp(1.5rem, calc(0.618rem + 3.53vw), 3rem),600,0.6,center);
+        margin-bottom: 100px;
+    }
+    .package-variants{
+        display: flex;
+        gap: 40px;
+        margin: 0 auto;
+    }
+    .package-standard, .package-allinclusive, .package-profi{
+        padding: 45px 43px;
+        max-width: 320px;
+        max-height: 577px;
+        background-color: #FFFFFF;
+        p{
+            @include text(#242121,Roboto Condensed,clamp(0.625rem, calc(0.52rem + 0.53vw), 0.875rem),400,0.6,none);
+            margin-bottom: 20px;
+        }
+        .package-price{
+            @include text(#01353E,Roboto Condensed,clamp(1rem, calc(0.474rem + 2.63vw), 2.25rem),400,0.6,center);
+            margin-top: 60px;
+        }
+    }
+    .package-standard{
+        .package-price{
+            margin-top: 140px;
+        }
+    }
+    .package-variants-title{
+        @include text(#01353E,Roboto Condensed,clamp(1rem, calc(0.474rem + 2.63vw), 2.25rem),400,0.6,center);
+        margin-bottom:50px;
+    }
+    
+}
+
+@media (max-width:768px){
+    .package{
+        .package-variants{
+            flex-direction: column;
+            margin: 0 auto;
+        }
+        
+    }
+
+}

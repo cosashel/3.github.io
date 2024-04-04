@@ -1,0 +1,44 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+body{
+    box-sizing: border-box;
+    position: relative;
+    overflow-y: visible;
+}
+
+%container{
+    max-width: 1200px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin text($color,$ff,$fs,$weight,$spacing,$textalign){
+    color: $color;
+    font-family: $ff;
+    font-size: $fs;
+    font-weight: $weight;
+    line-height: none;
+    letter-spacing: $spacing;
+    text-align: $textalign;
+}
+
+%slash{
+    font-family: Raleway;
+    font-weight: 600;
+    font-size: clamp(1.5vw, 0.8182vw + 5.4545vw, 4.5vw);
+    color: #00B2A0;
+}
+.slash{
+    position: relative;
+    &::after{
+        content: '/';
+        @extend %slash;
+        position: absolute;
+        top: 20%;
+
+    }
+}

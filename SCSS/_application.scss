@@ -1,0 +1,58 @@
+.application{
+    background-color: #fff;
+    .application-container{
+        @extend %container;
+        flex-direction: column;
+        // margin-bottom: 150px;
+    }
+    form{
+        display: grid;
+        
+    }
+    .application-title{
+        @include text(#01353E,Raleway,clamp(1.5rem, calc(0.618rem + 3.53vw), 3rem),600,0.6,center); 
+        margin-bottom: 150px;
+    }
+    
+    .application-fill-text{ 
+        display: flex;
+        flex-direction: column;
+        // max-width: 250px;
+    }
+    label{
+        @include text(#00B2A0,Roboto Condensed,clamp(0.75rem, calc(0.592rem + 0.79vw), 1.125rem),400,0.6,none); 
+        margin-bottom: 20px;
+    }
+    input{
+        border-bottom: 2px solid #DADADA;
+        margin-bottom: 20px;
+    }
+    input[type=submit]{
+        background-color: #fff;
+        border: solid 1px #C4C4C4;
+        max-width: 300px;
+        height: 70px;
+        margin-top: 70px;
+        @include text(#242121   ,Roboto Condensed,clamp(0.875rem, calc(0.612rem + 1.32vw), 1.5rem),400,0.6,center); 
+    }
+    input[type=submit]:hover{
+        background-color: #00B2A0;
+        color: #fff;
+    }
+    .application-fill{
+        grid-column:1/2;
+        padding: 50px;
+        padding-top: 0px;
+        max-height: 460px;
+    }
+    .application-question{
+        grid-column:2/3;
+        padding: 50px;
+        background-color: #F8F8F8;
+        @include text(#242121,Roboto Condensed,clamp(0.875rem, calc(0.612rem + 1.32vw), 1.5rem),400,0.6,none);
+        max-height: 460px;
+    }
+    p{
+        margin-bottom: 60px;
+    }
+}

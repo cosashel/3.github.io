@@ -1,0 +1,44 @@
+.info{
+    background-color: #fff;
+    .info-container{
+        @extend %container;
+        background-color: #fff;
+        flex-direction: column;
+        padding-top: 10%;
+        padding-bottom: 10%;
+        margin-bottom: 50px;
+
+        .info-title{
+            position: relative;
+            @include text(#01353E,Raleway,clamp(1rem, calc(0.273rem + 3.64vw), 3rem),600,0.6,center);
+            width: fit-content;
+            margin: auto;
+            .info-slash{
+                @extend %slash;
+                position: absolute;
+                top: 5%;
+            }
+        }
+        .info-text{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            row-gap: 8%;
+            column-gap: 10%;
+            margin-top: 5%;
+            // margin-bottom: 10%
+        }
+        .info-text{
+            div{
+                p{
+                    @include text(#242121, Roboto Condensed, 1px ,300, 0.6, none);
+                    font-size: clamp(0.625rem, calc(0.534rem + 0.45vw), 0.875rem);
+                    
+                }
+
+            }
+            
+        }
+    }
+}
+
